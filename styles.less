@@ -1,12 +1,13 @@
+@scale: 0.6;
+
 @bigSize: 10vw;
 @smallSize: 3.6vw;
-
 @ratioLR: 1;
 @ratioB: 0.7;
 
 .flag {
-    width: 100vw;
-    height: calc(100vw*2/3);
+    width: 100vw * @scale;
+    height: calc(100vw * @scale *2/3);
     position: absolute;
     top: 0;
     left: 0;
@@ -29,26 +30,26 @@
     
     position: absolute;
     &.big {
-        top: 13.3vw;
-        left: 7vw;
+        top: calc(13.3vw * @scale);
+        left: calc(7vw * @scale);
     }
     &.small1 {
-        top: 3.5vw;
-        left: 34.9vw;
+        top: calc(3.5vw * @scale);
+        left: calc(34.9vw * @scale);
         transform: rotate(98deg);
     }
     &.small2 {
-        top: 11vw;
-        left: 42.8vw;
+        top: calc(11vw * @scale);
+        left: calc(42.8vw * @scale);
         transform: rotate(119deg);
     }
     &.small3 {
-        top: 22vw;
-        left: 36.6vw;
+        top: calc(22vw * @scale);
+        left: calc(36.6vw * @scale);
     }
     &.small4 {
-        top: 26.5vw;
-        left: 34.6vw;
+        top: calc(26.5vw * @scale);
+        left: calc(34.6vw * @scale);
         transform: rotate(93deg);
     }
 }
@@ -77,15 +78,15 @@
     }
 
     &.starBig {
-        border-right-width: @ratioLR * @bigSize;
-        border-bottom-width: @ratioB * @bigSize;
-        border-left-width: @ratioLR * @bigSize;
+        border-right-width: @ratioLR * @bigSize * @scale;
+        border-bottom-width: @ratioB * @bigSize * @scale;
+        border-left-width: @ratioLR * @bigSize * @scale;
     }
 
     &.starSmall {
-        border-right-width: @ratioLR * @smallSize;
-        border-bottom-width: @ratioB * @smallSize;
-        border-left-width: @ratioLR * @smallSize;
+        border-right-width: @ratioLR * @smallSize * @scale;
+        border-bottom-width: @ratioB * @smallSize * @scale;
+        border-left-width: @ratioLR * @smallSize * @scale;
     }
 
 }
