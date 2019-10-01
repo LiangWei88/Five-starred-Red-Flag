@@ -1,0 +1,91 @@
+@bigSize: 10vw;
+@smallSize: 3.6vw;
+
+@ratioLR: 1;
+@ratioB: 0.7;
+
+.flag {
+    width: 100vw;
+    height: calc(100vw*2/3);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bg {
+    background: url('./flag.png');
+    background-size: contain;
+}
+
+.mask {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.main {
+    background-color: #de2910;
+}
+
+.starWrapper {
+    
+    position: absolute;
+    &.big {
+        top: 13.3vw;
+        left: 7vw;
+    }
+    &.small1 {
+        top: 3.5vw;
+        left: 34.9vw;
+        transform: rotate(98deg);
+    }
+    &.small2 {
+        top: 11vw;
+        left: 42.8vw;
+        transform: rotate(119deg);
+    }
+    &.small3 {
+        top: 22vw;
+        left: 36.6vw;
+    }
+    &.small4 {
+        top: 26.5vw;
+        left: 34.6vw;
+        transform: rotate(93deg);
+    }
+}
+
+.star {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: #ffde00;
+    border-top-color: transparent;
+    border-top: 0 solid transparent;
+
+    &.part1 {
+        transform: rotate(35deg);
+    }
+
+    &.part2 {
+        transform: rotate(-35deg);
+    }
+
+    &.part3 {
+        transform: rotate(107deg);
+    }
+
+    &.starBig {
+        border-right-width: @ratioLR * @bigSize;
+        border-bottom-width: @ratioB * @bigSize;
+        border-left-width: @ratioLR * @bigSize;
+    }
+
+    &.starSmall {
+        border-right-width: @ratioLR * @smallSize;
+        border-bottom-width: @ratioB * @smallSize;
+        border-left-width: @ratioLR * @smallSize;
+    }
+
+}
